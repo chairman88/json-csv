@@ -1,8 +1,11 @@
 # jsontocsv-example
 
 ## Hvordan teste
+Start applikasjonen
 
-Gjør en post til localhost:3000/csv
+`npm start`
+
+Gjør en post (feks med [Postman](https://www.getpostman.com/)) til localhost:3000/csv
 
 Hvor body er:
 
