@@ -32,8 +32,8 @@ const opts = { fields };
 app.post('/csv', (req, res) => {
   try {
     const data = json2csv(req.body.data, opts); // Gjør om json til csv
-    res.attachment('filename.csv');
-    res.status(200).send(data); // send tilbake csv fil
+    console.log(data)
+    res.status(200).send(); // send tilbake csv fil
   } catch (err) {
     res.status(400).send();
   }
