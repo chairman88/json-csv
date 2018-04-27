@@ -1,3 +1,4 @@
+var cors = require('cors');
 const express = require('express');
 const json2csv = require('json2csv').parse;
 var bodyParser = require('body-parser');
@@ -10,6 +11,7 @@ app.use(
     extended: true
   })
 );
+app.use(cors());
 
 const fields = [
   'gruppenummer',
@@ -37,7 +39,7 @@ app.post('/csv', (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'));
+app.listen(3001, () => console.log('Example app listening on port 3001!'));
 
 /*
 Hvordan teste:
