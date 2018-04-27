@@ -33,7 +33,7 @@ app.post('/csv', (req, res) => {
   try {
     const data = json2csv(req.body.data, opts); // Gjør om json til csv
     console.log(data)
-    res.status(200).send(); // send tilbake csv fil
+    res.status(200)..json({status:"ok"});
   } catch (err) {
     res.status(400).send();
   }
